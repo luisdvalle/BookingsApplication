@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BookingService.Abstractions;
+using BookingService.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -16,6 +18,9 @@ namespace BookingsProcessingSolution
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            // Registering mapping in DI container
+            services.AddScoped<IBookingProcessor<string>, BookingProcessor>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
