@@ -1,7 +1,35 @@
-﻿
-@{
-    ViewData["Title"] = "Index";
-}
+﻿<h2>Process Bookings</h2>
 
-<h2>Index</h2>
+<p>Bookings to be processed</p>
 
+<ul>
+    <li>0900 1730</li>
+    <li>2011-03-17 10:17:06</li>
+    <li>EMP001</li>
+    <li>2011-03-21 09:00 2</li>
+    <li>2011-03-16 12:34:56</li>
+    <li>EMP002</li>
+    <li>2011-03-21 09:00 2</li>
+    <li>2011-03-16 09:28:23</li>
+    <li>EMP003</li>
+    <li>2011-03-22 14:00 2</li>
+    <li>2011-03-17 11:23:45</li>
+    <li>EMP004</li>
+    <li>2011-03-22 16:00 1</li>
+    <li>2011-03-15 17:29:12</li>
+    <li>EMP005</li>
+    <li>2011-03-21 16:00 3</li>
+</ul>
+
+<div>
+    <p>Call service - process bookings</p>
+</div>
+
+<form asp-action="Process" asp-controller="Booking" method="post" enctype="multipart/form-data">
+    <div>
+        <label>File:</label>
+        <input type="file" name="file" />
+    </div>
+
+    <input type="submit"  value="Send" />
+</form>
