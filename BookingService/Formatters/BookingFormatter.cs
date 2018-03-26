@@ -9,6 +9,9 @@ using System.Text;
 
 namespace BookingService.Formatters
 {
+    /// <summary>
+    /// Provides a custom formatter for bookings
+    /// </summary>
     public class BookingFormatter : IFormatter
     {
         public SerializationBinder Binder { get; set; }

@@ -10,6 +10,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BookingsProcessingSolution.Controllers
 {
+    /// <summary>
+    /// Contains API endpoints to process request data.
+    /// </summary>
     [Produces("application/json")]
     [Route("api/Booking")]
     public class BookingController : Controller
@@ -21,6 +24,11 @@ namespace BookingsProcessingSolution.Controllers
             _bookingProcessor = bookingProcessor;
         }
 
+        /// <summary>
+        ///     API endpoint to get and process request data
+        /// </summary>
+        /// <param name="file">file with booking information</param>
+        /// <returns>View with data of bookings processed</returns>
         [HttpPost]
         public IActionResult Process(IFormFile file)
         {
