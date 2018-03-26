@@ -4,8 +4,9 @@ using System.Text;
 
 namespace BookingService.Abstractions
 {
-    public interface IBookingProcessor<T>
+    public interface IBookingProcessor
     {
-        T ProcessBooking(T bookingRequest);
+        Request ProcessBookingString(string bookingsStr);
+        Response ProcessBooking(Request bookings);
     }
 }
