@@ -20,7 +20,7 @@ namespace BookingsProcessingSolution
             services.AddMvc();
 
             // Registering mapping in DI container
-            services.AddScoped<IBookingProcessor<string>, BookingProcessor>();
+            services.AddScoped<IBookingProcessor, BookingProcessor>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
