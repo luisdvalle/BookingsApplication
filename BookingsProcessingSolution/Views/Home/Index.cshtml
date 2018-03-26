@@ -40,7 +40,7 @@
     <li>2011-03-21 16:00 3</li>
 </ul>
 
-<p>Output</p>
+<h4>Output</h4>
 
 <p>
     The application must provide a successful booking calendar as output, with bookings being
@@ -61,7 +61,8 @@
     <li>EMP004</li>
 </ul>
 
-<p>Constraints</p>
+<h4>Constraints</h4>
+
 <ul>
     <li>No part of a meeting may fall outside office hours.</li>
     <li>Meetings may not overlap.</li>
@@ -72,11 +73,9 @@
     <li>Bookings must be processed in the chronological order in which they were submitted.</li>
     <li>The ordering of booking submissions in the supplied input is not guaranteed.</li>
 </ul>
-
-<div>
-    <p>Test this bookings service</p>
-</div>
 <br />
+
+<h2>Test this bookings service</h2>
 
 <form asp-action="Process" asp-controller="Booking" method="post" enctype="multipart/form-data">
     <div>
