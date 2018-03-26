@@ -1,0 +1,23 @@
+﻿@model BookingsResponse
+
+<h2>Bookings Processed</h2>
+
+<table>
+    <tr>
+        <th></th>
+    </tr>
+    @foreach (var booking in Model.Bookings)
+    {
+        <tr>
+            <td><strong>@booking.Date</strong></td>
+        </tr>
+        <tr>
+            <td>@booking.StartTime.Hour</td>
+            <td>@booking.EndTime.Hour</td>
+        </tr>
+        <tr>
+            <td>@booking.EmployeeId</td>
+        </tr>
+    }
+</table>
+
