@@ -1,2 +1,75 @@
-# OfxTest
-Application to process booking requests
+<h2>Application to process booking requests</h2>
+
+<h4>The problem</h4>
+
+<p>
+    An employer has an existing system for employees to submit booking requests for
+    meetings in the boardroom. The employer now requires that an application is implemented
+    for processing batches of booking requests.
+</p>
+
+<h4>Input</h4>
+
+<p>
+    The processing application must process input as text. The first line of the input text
+    represents the company office hours, in 24-hour format, and the remainder of the input
+    represents individual booking requests. Each booking request is in the following format.
+</p>
+
+<p>[request submission time, in the format YYYY-MM-DD HH:MM:SS] [ARCH:employee id]</p>
+<p>[meeting start time, in the format YYYY-MM-DD HH:MM] [ARCH:meeting duration in hours]</p>
+
+<p>sample text input follows:</p>
+
+<ul>
+    <li>0900 1730</li>
+    <li>2011-03-17 10:17:06</li>
+    <li>EMP001</li>
+    <li>2011-03-21 09:00 2</li>
+    <li>2011-03-16 12:34:56</li>
+    <li>EMP002</li>
+    <li>2011-03-21 09:00 2</li>
+    <li>2011-03-16 09:28:23</li>
+    <li>EMP003</li>
+    <li>2011-03-22 14:00 2</li>
+    <li>2011-03-17 11:23:45</li>
+    <li>EMP004</li>
+    <li>2011-03-22 16:00 1</li>
+    <li>2011-03-15 17:29:12</li>
+    <li>EMP005</li>
+    <li>2011-03-21 16:00 3</li>
+</ul>
+
+<h4>Output</h4>
+
+<p>
+    The application must provide a successful booking calendar as output, with bookings being
+    grouped chronologically by day. For the sample input displayed above, your system must
+    provide the following output.
+</p>
+
+<p>Sample text output:</p>
+
+<ul>
+    <li>2011-03-21</li>
+    <li>09:00 11:00</li>
+    <li>EMP002</li>
+    <li>2011-03-22</li>
+    <li>14:00 16:00</li>
+    <li>EMP003</li>
+    <li>16:00 17:00</li>
+    <li>EMP004</li>
+</ul>
+
+<h4>Constraints</h4>
+
+<ul>
+    <li>No part of a meeting may fall outside office hours.</li>
+    <li>Meetings may not overlap.</li>
+    <li>
+        The booking submission application only allows one submission at a time, so that submission times are
+        guaranteed to be unique.
+    </li>
+    <li>Bookings must be processed in the chronological order in which they were submitted.</li>
+    <li>The ordering of booking submissions in the supplied input is not guaranteed.</li>
+</ul>
